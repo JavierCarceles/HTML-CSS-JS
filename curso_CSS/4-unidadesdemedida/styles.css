@@ -1,0 +1,27 @@
+.contenedor{
+    font-size: 32px;
+}
+
+.pixeles{
+    font-size: 32px; /*por defecto son 16px*/
+    background-color: gray;
+    width: 700px;
+}
+
+.porcentaje{
+    font-size: 200%; /*100% del valor contenedor*/
+    background-color: gray;
+    width: 50%;
+}
+
+.em{
+    font-size: 1em; /*1em=valor del contenedor(32px)*/
+    background-color: gray;
+    width: 1em;
+}
+
+.rem{
+    font-size: 0.8rem; /*1rem=valor por defecto(16px)*/
+    background-color: gray; 
+    width: 1rem;
+}

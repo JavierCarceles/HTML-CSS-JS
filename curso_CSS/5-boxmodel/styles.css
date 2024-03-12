@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.primero{
+    background-color: lightcoral;
+    /*margin-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;*/
+
+    padding: 5px 10px 15px 20px;
+    
+    /*border-width: 3px;
+    border-style: solid;
+    border-color: aqua;*/
+    border: 3px solid aqua;
+    border-radius: 4px;
+
+    margin: 15px;
+    width: 50px;
+    height: 30px;
+
+    display: inline-block;
+
+}
+
+.segundo{
+    background-color: lightseagreen;
+
+    padding: 5px 10px 15px 20px;
+
+    border: 3px solid aqua;
+    border-radius: 4px;
+
+    /*Los margin del primeo inferior y el segundo superior se fusionan, no se suman*/
+    margin: 15px;
+
+    width: 50px;
+    height: 30px;
+    
+    /*Con esta etiqueta los margin se suman, no se solapan*/
+    display: inline-block;
+
+}

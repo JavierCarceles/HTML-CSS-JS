@@ -1,0 +1,87 @@
+.main-container{
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    width: 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+}
+input{
+    margin: 3px 0;
+}
+/*CHECKED -> INDICA QUE INPUT HA SIDO SELECCIONADO, EN ESTE CASO USAMOS EL TIPO RADIO*/
+input[type=radio]:checked + label{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+input[type=checkbox]:checked{
+    margin-left: 15px;
+    box-shadow: 0 0 0 3px lime;
+}
+
+/*TEXT -> PARA ENABLED Y DISABLED*/
+input[type=text]:enabled{
+    background-color: #3ac517bd;
+}
+input[type=text]:disabled{
+    background-color: #dddddd;
+}
+
+/*FOCUS -> Cuando haces click en un elemento, como un campo de texto en el que quieres escribir*/
+input[type=text]:focus{
+    width: 190px;
+    height: 22px;
+}
+
+/*RANGE -> Para elementos donde colocar un numero con un rango disponible o permitido*/
+input[type=number]:in-range{
+    border: 2px solid green;
+}
+input[type=number]:out-of-range{
+    border: 2px solid red;
+}
+
+/*VALID -> Para campos de texto tipo email por ejemplo donde es valido o no lo que escribes*/
+input[type=email]:valid{
+    background-color: rgb(0, 255, 255);
+}
+input[type=email]:invalid{
+    background-color: rgb(236, 123, 123);
+}
+
+/*OPTIONAL/REQUIRED -> Para campos opcionales o requeridos*/
+input:required{/*si cambias required por optional los cambios se aplican en optional*/
+    background-color: rgb(255, 0, 221);
+}
+
+/*READ-WRITE/READ-ONLY -> Para campos de texto donde se puede escribir, o campos de texto donde no se puede escribir*/
+input:read-only{
+    background-color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

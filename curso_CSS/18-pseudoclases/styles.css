@@ -1,0 +1,58 @@
+.main-container{
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px ;
+    padding: 15px 30px;
+    margin: 120px auto;
+    width: 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+} 
+
+li:first-child{
+    color: blue;
+}
+li:last-child{
+    color: blue;
+}
+/*Nos permite seleccionar un elemento en específico, si pones (3n) se selecciona cada 3 elementos, pero si pones (3) solo selecciona
+el 3er hijo*/
+li:nth-child(3n){
+    color: crimson;
+}
+/*Aplica los estilos al 4 elemento empezando por el final si pones (4), pero si pones (4n) se aplicaran los cambios cada 4 elementos
+empezando por el final*/
+li:nth-last-child(4n){
+    background-color: darkgoldenrod;
+}
+/*HASTA AQUI LOS CAMBIOS SON CON EL TEXTO COMENTADO DEL HTML, TODOS LOS LI*/
+/*En este caso dentro del div hay elementos p y a, entonces p:last-child no sirve porque el last no es un elemento p, sino uno a
+por lo que podemos usar siempre first-of-type y last-of-type para que no haya problemas, solo que en el video lo deja con first-child*/
+p:first-child{
+    color: green;
+}
+p:last-of-type{
+    color:blue
+}
+a:first-of-type{
+    color: blue;
+}
+a:last-child{
+    color: red;
+}
+/*Cada dos elementos del tipo seleccionado(p) se pone de color blueviolet en este caso*/
+p:nth-of-type(2n){
+    background-color: blueviolet;
+}
+/*El tercer elemento del elemento a empezando por el final se pone yellow*/
+a:nth-last-of-type(3){
+    background-color: yellow;
+}
+/*PSEUDOELEMENTO BEFORE -> AÑADE LO QUE PONGAS ANTES DE CADA ELEMENTO, EN ESTE CASO EL DINOSAURIO RARO*/
+p::before{
+    content: "🐱‍🐉";
+}

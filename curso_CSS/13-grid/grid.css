@@ -1,0 +1,26 @@
+/*La diferencia entre grid y flexbox es que en flexbox todos los elementos se tenian que ajustar en base al mismo eje
+pero con GRID puedes alinear elementos independientemente con el eje que quieras a la vez*/
+.container{
+    display: grid;
+    grid-template-columns: auto auto;/*Indicas que quieres que el contenido se divida en 2 columnas, calculando automaticamente su ancho.
+                                     Tambien se puede usar grid-template-columns: 1fr 1fr 1fr, que indica que quieres los 3 elementos
+                                     ocupen 1 respecto al total declarado, si tienes 1fr1fr1fr, son 3fr en total, y cada uno es 1, entonces
+                                     se harán 3 columnas iguales, pero podrías hacer 3fr1fr1fr y el primer elemento ocuparia 3/5 columnas
+                                     verticales de espacio*/
+    /*grid-template-columns: repeat(6, 1fr); Tambien se puede declara así, esto divide en 6 y todos equivelentes a 1fr*/
+    gap: 20px 30px; /*20px es el espaciado entre filas, y 30px el espaciado entre columnas*/
+    align-items: center;/*respetando el espaciado de gap, los elementos se centran en el eje X*/
+    justify-items: center;/*centra los elementos en el eje y respetando los espaciados de gap*/
+}
+
+.item5{
+    grid-column: 1 / 4; /*Indica que el item5 ocupará desde la linea vertical 1(la que esta pegada a la pared) hasta la 4, 
+                        entonces ocupará 3 columnas*/
+}
+
+.item4{
+    grid-column-start: 6;
+    grid-row: 1 / 4; /*Hace que item4 empiece en la fila 1 y acabe en la 4, pero hay que indicar que sea a partir
+                     de la columna en la que está, porque sinó empezará por defecto en la columna 1, eso lo haces con el grid-colum-start*/
+
+}

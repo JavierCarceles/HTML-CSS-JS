@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="recursos/nezuko.png"> 
+    <title>Coding</title>
+</head>
+<body>
+
+    <h1 id="">Aprendiendo HTML5</h1>
+
+    <nav>
+
+        <a href="#introduccion">Introduccion</a>
+        <a href="#audioyvideo">Audio y Video</a>
+        <a href="#formulario">Formulario</a>
+        <a href="#tablas">Tablas</a>
+        <a href="#etiquetas">Etiquetas</a>
+        <a href="#enlaces">Enlaces</a>
+        <a href="#listas">Listas</a>
+
+    </nav>
+
+    <h1>Graficos SVG</h1>
+
+    <!--<svg width="500" height="500">
+        <circle cx="150" cy="150" r="100" stroke="blue" stroke-width="4" fill="pink"/>
+        <line x1="150" y1="150" x2="250" y2="150" stroke="blue" stroke-width="4"/>
+        <text x="150" y="140" fill="red">r=100</text>
+    </svg>-->
+
+    <!--<svg width="500" height="500">
+        <polyline points="0,40 40,40 40,0 80,0 80,80 0,80" stroke="blue" stroke-width="4"/>
+    </svg>-->
+
+    <!--
+        M=mover
+        L=linea
+        H=linea horizontal
+        V=linea vertical
+        C=curva
+        s=curva suave
+        Q=curva cuadratica
+        T=curva cuadratica suave
+        A=arco elíptico
+        Z=cerrar el path
+    -->
+    <svg width="500" height="500">
+        <circle cx="100" cy="350" r="3"/>
+        <circle cx="250" cy="50" r="3"/>
+
+        <text x="100" y="350" dx="-20">A</text>
+        <text x="250" y="50" dx="10">B</text>
+
+        <path d="M 100 350 Q 50 -50 250 50" stroke="blue" stroke-width="5" fill="none"></path>
+
+    </svg>
+
+    <h2 id="introduccion">Introduccion</h2>
+
+    <!--alt es para que los buscadores perciban ese texto-->
+    <!--<img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/f7adcedd1d7c53ae18d851003a3cfae4.jpeg" alt="viaje">-->
+
+    <!--<img src="recursos/sherry-christian-8Myh76_3M2U-unsplash.jpg" alt="viaje" width="500" height="300"><br>-->
+
+    <!--<img src="recursos/XOsX.gif" alt="viaje" title="pato"><br>-->
+
+    <!--<a href="https://www.google.es" target="_blank">
+        <img src="recursos/sherry-christian-8Myh76_3M2U-unsplash.jpg" alt="leon" width="500" height="300">
+    </a><br>-->
+    <!--para conseguir las coordenadas -> https://www.image-map.net/-->
+
+    <img src="recursos/sherry-christian-8Myh76_3M2U-unsplash.jpg" alt="leon" width="500" height="300" usemap="#map-leon">
+
+    <map name="map-leon">
+        <area shape="poly" coords="2006,3928,39,3960,45,58,882,11,1020,180,1391,175,1486,217,2154,366,2658,615,2901,848,3076,1091,3315,1319,3580,1452,3855,1600,3903,1833,3855,2140,3755,2681,3410,3232,2202,3163,1820,3698,1910,3862" href="https://www.amazon.es/Gr%C3%A1fico-animal-salvaje-Rugido-Camiseta/dp/B0B7KGKFGT/ref=sr_1_4_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=15EMHUEDCFDOK&keywords=leon&qid=1669629274&qu=eyJxc2MiOiI2LjM0IiwicXNhIjoiNS4xNyIsInFzcCI6IjMuMTgifQ%3D%3D&sprefix=leon%2Caps%2C123&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" alt="leon">
+    </map><br>
+
+    <a href="pagina.zip">Descargar pagina</a>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Rerum, quod error id, <a href="https://en.wiktionary.org/wiki/repellendus" target="\_blank">repellendus</a> <i>consequatur</i> sit quis quibusdam sed <strong>excepturi</strong> dignissimos <em>iusto</em> laborum aperiam inventore quia? Hic minus esse beatae <a target="_blank" href="recursos/segundaPagina.html">Segunda Pagina.</a></p>
+    
+    <h2 id="audioyvideo">Audio y Video</h2>
+
+    <audio controls autoplay loop muted>
+        <source src="recursos/audio.mp3" type="audio/mp3">
+        <source src="recursos/audio.ogg" type="audio/ogg">
+        El navegador no ha podido reproducir el audio
+    </audio>
+
+    <audio src="recursos/audio.mp3" controls></audio><br>
+    <video src="recursos/video.mp4" autoplay controls loop></video>
+
+    <video controls>
+        <source src="recursos/video.mp4" type="video/mp4">
+        <source src="recursos/video.wav" type="video/wav">
+        El navegador no ha podido reproducir el video
+    </video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/akFzU5K8VL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2 id="formulario">Formulario</h2>
+    <form action="myscript.php" method="POST">
+
+        <fieldset>
+            <legend>Datos del usuario</legend>
+                <label for="Name">Nombre:</label><br>
+                <input type="text" id="Name" name="Name" placeholder="Ingresa tu nombre"><br>
+                
+                <label for="correo">Correo:</label><br>
+                <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required><br>
+
+                <label for="pass">Contraseña:</label><br>
+                <input type="text" id="pass" name="pass" placeholder="Ingresa tu contraseña"><br>
+
+                <label for="birthday">Cumpleaños:</label><br>
+                <input type="date" id="birthday" name="birthday"><br><br>
+
+                <label for="cv">Ingresa tu cv:</label>
+                <input type="file" id="cv" name="cv"><br><br>
+
+                <textarea name="Description" id="Description" cols="50" rows="10"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Color Favorito</legend>
+            <!--3 maneras diferentes de pedir un color-->
+            <input type="radio" id="rojo" name="color" value="rojo">
+            <label for="rojo">Rojo</label><br>
+
+            <input type="radio" id="azul" name="color" value="azul">
+            <label for="azul">Azul</label><br>
+
+            <input type="radio" id="verde" name="color" value="verde">
+            <label for="verde">Verde</label><br><br>
+
+            <input type="color" name="color"><br><br>
+
+            <select name="color2" id="color2">
+                <option value="rojo">rojo</option>
+                <option value="azul">azul</option>
+                <option value="verde">verde</option>
+            </select>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Hobbies</legend>
+
+            <input type="checkbox" id="leer" name="hobby1" value="leer">
+            <label for="leer">Leer</label><br>
+
+            <input type="checkbox" id="bailar" name="hobby2" value="bailar">
+            <label for="bailar">Bailar</label><br>
+
+            <input type="checkbox" id="programar" name="hobby3" value="programar">
+            <label for="programar">Programar</label><br>
+
+        </fieldset>
+        <br>
+        <input type="submit" value="Listo">
+        <input type="reset" value="Borrar">
+
+
+    </form>
+
+    <h2 id="tablas">Tablas</h2>
+
+    <table border="20">
+        <caption>Mi horario</caption>
+        <tr>
+            <th colspan="5">HORARIO</th>
+            <th colspan="2">Fin de semana</th>
+        </tr>
+        <tr>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sabado</th>
+            <th>Domingo</th>
+        </tr>
+        <tr>
+            <th rowspan="3">Programar</th>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+        </tr>
+        <tr>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+        </tr>
+        <tr>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+            <td>Programar</td>
+        </tr>
+    </table>
+
+    <h2 id="etiquetas">Etiquetas</h2>
+
+    <!--type es el dibujito de los items: (circle, square, none)-->
+    <ul type="square">
+        <li>Item</li>
+        <li>Item</li>
+        <ul type="circle">
+            <li>Item</li>
+            <li>Item</li>
+            <ul type="none">
+                <li>Item</li>
+                <li>Item</li>
+            </ul>
+        </ul>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <!--type es el tipo de enumeracion ordenada: (1, A, a, I, i)-->
+    <ol type="1">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ol>
+
+    <!--dl es una lista descriptiva//dt es un termino de la descripcion//dd son los detalles de la descripcion-->
+    <dl>
+        <dt>HTML</dt>
+            <dd>
+                HTML es Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quod veritatis at enim optio voluptas, incidunt commodi tenetur corrupti dicta adipisci sapiente quo? Odio cupiditate, et vel ex fugit autem?
+            </dd>
+        <dt>CSS</dt>
+            <dd>CSS es Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat fuga aut ad explicabo blanditiis vel molestiae fugit natus quisquam doloribus aliquam ex aliquid suscipit, voluptates accusantium! Provident fugit omnis cumque.</dd>
+        <dt>JS</dt>
+            <dd>JS es Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum facilis unde molestias libero beatae commodi, placeat neque ex dolor eum, enim quas repellat delectus aut obcaecati ea nostrum voluptatem excepturi.</dd>
+    </dl>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Rerum, quod error id, repellendus <i>consequatur</i> sit quis quibusdam sed <strong>excepturi</strong> dignissimos <em>iusto</em> laborum aperiam inventore quia? Hic minus esse beatae voluptate.</p>
+
+    <h2 id="enlaces">Enlaces</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Rerum, quod error id, repellendus <i>consequatur</i> sit quis quibusdam sed <strong>excepturi</strong> dignissimos <em>iusto</em> laborum aperiam inventore quia? Hic minus esse beatae voluptate.</p>
+
+    <h2 id="listas">Listas</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Rerum, quod error id, repellendus <i>consequatur</i> sit quis quibusdam sed <strong>excepturi</strong> dignissimos <em>iusto</em> laborum aperiam inventore quia? Hic minus esse beatae voluptate.</p>
+
+    <a href="#inicio">Inicio</a>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.padre{
+    /*Cada elemento bloque se coloca uno despues del otro
+    El ancho se ajusta al ancho del contenido, pero el alto se ajusta al tamaño del padre
+    Hay que tener en cuenta el eje principal X y el secundario Y, por defecto es así pero se puede cambiar*/
+    display: flex;
+    justify-content: flex-start; /*Los elementos se colocan al START del eje principal, en este caso X, pero si pones flex-end se colocan
+                                 al final del eje principal y si pones centes en el centro, tambien existe space-between que los separa
+                                 equitativamente, y space-around los separa igual, solo que deja espacios a los margenes del eje principal*/
+    align-items: flex-start; /*Centra los elementos en el eje principal, antes ocupaba el espacio vertical del padre, ahora tanto en vertical como
+                         horizontal, ocupa el tamaño del texto que tenga dentro y los situa en el eje X, tambien puede poner flex-end*/
+    flex-direction: row-reverse; /*Cambia el orden de los elementos, colum -> cambia el eje principal al eje Y*/
+    flex-wrap: wrap; /*Si hay demasiados elementos hijos se salen del elemento padre, con este wrap haces que se distribuyan dentro
+                     del elemento padre y no se salgan pero se alinean por defecto encima del eje principal*/
+    align-content: flex-start; /*Los elementos se alinean en la parte inicial del eje principal*/
+}
+
+.martes{
+    align-items: center;
+    flex-grow: 1; /*Si es 0 no pasa nada, pero si es 1, le dices que ocupe todo el espacio que pueda respecto al eje principal,
+                  en este caso tiene miercoles a la derecha y lunes a la izquierda, así que ocupa todo el espacio entremedias*/
+    order: 1;/*Indica el orden del elemento empezando por el final y despues de los elementos que no tengan este atributo,
+             si pones valores negativos como -1 sería el primero pero antes de los elementos que no tienen la propierdad order*/
+    
+}
+
+.miercoles{
+    align-items: flex-end;
+    flex-basis: 300px;/*Es necesario para poder usar el flex-shrink, este es el tamaño en el eje respectivo que se trabaja*/
+    flex-shrink: 1;/*Es lo mismo que el flex-grow pero a la inversa, si es 1 hace que ocupe el menor espacio posible*/
+    /*flex: 0 1 300px; parametros -> grow shrink basis, así ahorras lineas de codigo*/
+}

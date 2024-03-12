@@ -1,0 +1,33 @@
+.box{
+    border: 1px solid;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    animation-name: cambiocolor;
+    animation-duration: 2000ms;
+    animation-delay: 3000ms;
+    animation-iteration-count: 3;    
+    animation-direction: reverse; /*El orden de 0% a 100% o de 100% a 0%*/
+    animation-timing-function: ease; /*Suaviza el recorrido de la animacion*/
+    animation-fill-mode: forwards; /*Hace que la animacion se quede en el estado que tenga en la version final, en este caso 100%*/
+}
+/*La diferencia entre animation y transition es que para que la transition pase tienes que usarla sobre un HOVER, que
+implica que tienes que pasar el raton por encima del objeto que se tiene que transformar, para el animation no hace
+falta que el usuario toque nada para que suceda.*/
+@keyframes cambioclor{
+
+    0%{
+        background-color: white;
+        width: 300px;
+        height: 300px;        
+    }
+    /*50%{background-color: yellow;}*/
+    100%{
+        background-color: red;
+        width: 150px;
+        height: 600px;        
+    }
+
+}

@@ -1,0 +1,19 @@
+a:link{ /*Cualquier etiqueta con un atributo href, a:link -> etiqueta:pseudoclase*/
+    color: red;
+}
+
+a:visited{/*Cambia el estilo de enlaces una vez han sido visitados*/
+    color: green;
+}
+
+a:hover{
+    background-color: darkred;
+    color: white;
+}
+
+a:active{/*Entre que clica y suelta el boton al hacer click en cualquier enlace, se aplica este color*/
+    background-color: orangered;
+}
+
+/*EL ORDEN DE LINK, VISITED, HOVE Y ACTIVE ES CRUCIAL, NO PUEDE VARIAR
+si te acuerdas de LOVE HATE, TE ACORDARÁS LoVe HAte->LinkVisitedHoveActive*/

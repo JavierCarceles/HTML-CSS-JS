@@ -1,0 +1,54 @@
+h1{
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 64px;
+    text-align: center;
+    color: #c69c6d;
+    /*text-shadow: 2px 2px blue;*/
+    text-shadow: -2px 2px 4px blue;
+    /*pixeles hacia la derecha, pixeles hacia abajo, difuminado, color*/
+}
+p{
+    font-family: 'Gentium Plus', serif;
+    font-size: 20px;
+    text-align: justify;
+    width: 80%;/*ANCHO*/
+    margin-left: auto;
+    margin-right: auto;
+}
+p.capital::first-letter{
+    color: #c69c6d;
+    font-size: 80px;
+    float: left;
+    background-color: aqua;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: brown;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+a:hover{
+    color: #c69c6d;
+}
+
+.underline{
+    text-decoration: overline;
+    /*text-decoration: line-through;*/
+}
+
+.italic{
+    font-style: oblique;
+}
+
+.border{
+    border: 10px dashed/*o dashed o dotted o solid*/ gray;
+    /*margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;*/
+    margin: 10% 15% 10% 15%;
+}

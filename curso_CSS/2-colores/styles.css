@@ -1,0 +1,19 @@
+.name{
+    background-color: blue;
+}
+
+.hex{
+    background-color: #71C8FF;
+}
+.rgb{
+    background-color: rgb(12, 127, 57);
+}
+.rgba{
+    background-color: rgba(12, 127, 57, 0.5);
+}
+.hsl{
+    background-color: hsl(16, 100%, 50%);
+}
+.hsla{
+    background-color: hsla(16, 100%, 50%, 0.3);
+}

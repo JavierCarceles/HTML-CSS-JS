@@ -1,0 +1,31 @@
+body{
+    background-color: aquamarine;
+    /*unsplash para descargar las imagenes, link del url haciendo zoom en la imagen, click derecho, copiar direccion de imagen*/
+    background-image: url(https://images.unsplash.com/photo-1598124146163-36819847286d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    /*background-repeat: repeat-x;*/
+    /*Para redimensionar la imagen por si es muy grande: picresize.com*/
+}
+
+.photo{
+    /*background-image: url("imagenes/smile1.jpg");*/
+    width: 500px;
+    height: 700px;
+    border: 2px solid black;
+    background-repeat: no-repeat;
+    /*background-position: bottom 10px right 10px;*/
+    background-size: cover;
+    background: linear-gradient(to right, rgba(255, 255, 255, .4), rgba(255, 0, 255, .4)), url("imagenes/smile1.jpg") ;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.profile{
+    background-image: url("https://images.unsplash.com/photo-1598124146163-36819847286d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-position: 50% 50%;
+    border-radius: 50%;
+}
