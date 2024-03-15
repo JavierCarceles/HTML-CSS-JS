@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+body{
+  background: cadetblue;
+  font-family: 'Satisfy', cursive;
+}
+h1{
+  background: burlywood;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+  box-shadow: 5px 5px 5px black;
+  margin: 35% auto;
+  padding: 8px;
+  letter-spacing: 3px;
+}
